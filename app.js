@@ -8,13 +8,14 @@ const imgSources = [
   "Gal.jpg",
   "Ori.jpg",
 ];
+const basePath = "./assets/";
 let currentImg = "Artium.jpg";
 const $currentImgEl = document.getElementById("my-img");
 
 function generateImg() {
   const nextImg = getNewImg(currentImg);
   currentImg = nextImg;
-  $currentImgEl.src = nextImg;
+  $currentImgEl.src = basePath + nextImg;
   document.title = currentImg.substring(0, currentImg.indexOf("."));
 }
 
